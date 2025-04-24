@@ -384,6 +384,9 @@ const SupplierDashboard = () => {
                           <p className="text-sm text-muted-foreground mt-1">
                             Rp 8.500/buah - Gudang Karawang
                           </p>
+                          <p className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full inline-block mt-1">
+                            Bahan Bangunan
+                          </p>
                           <p className="text-sm mt-2">
                             Bata ringan ukuran 10x20x60 cm, densitas 600kg/m³
                           </p>

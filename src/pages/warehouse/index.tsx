@@ -276,6 +276,136 @@ const WarehouseDashboard = () => {
               ))}
             </TabsContent>
 
+            <TabsContent value="inventory" className="space-y-4">
+              <h1 className="text-2xl font-bold mb-4">Inventory Management</h1>
+
+              <div className="flex justify-between items-center mb-4">
+                <div className="flex gap-2">
+                  <select className="p-2 border rounded-md text-sm">
+                    <option value="">Semua Kategori</option>
+                    <option value="bahan_bangunan">Bahan Bangunan</option>
+                    <option value="alat_konstruksi">Alat Konstruksi</option>
+                    <option value="material_finishing">
+                      Material Finishing
+                    </option>
+                    <option value="perlengkapan_keamanan">
+                      Perlengkapan Keamanan
+                    </option>
+                    <option value="material_listrik">Material Listrik</option>
+                  </select>
+                  <input
+                    type="text"
+                    placeholder="Cari produk..."
+                    className="p-2 border rounded-md text-sm"
+                  />
+                </div>
+                <Button size="sm">Update Stok</Button>
+              </div>
+
+              <Card>
+                <CardContent className="p-4">
+                  <div className="overflow-x-auto">
+                    <table className="w-full">
+                      <thead>
+                        <tr className="border-b text-sm">
+                          <th className="text-left py-2 px-2">Kode</th>
+                          <th className="text-left py-2 px-2">Nama Produk</th>
+                          <th className="text-left py-2 px-2">Kategori</th>
+                          <th className="text-center py-2 px-2">Stok</th>
+                          <th className="text-center py-2 px-2">Status</th>
+                          <th className="text-right py-2 px-2">Aksi</th>
+                        </tr>
+                      </thead>
+                      <tbody className="text-sm">
+                        <tr className="border-b">
+                          <td className="py-3 px-2">BH-001</td>
+                          <td className="py-3 px-2">Besi Hollow 4x2</td>
+                          <td className="py-3 px-2">
+                            <Badge variant="outline">Bahan Bangunan</Badge>
+                          </td>
+                          <td className="py-3 px-2 text-center">120 batang</td>
+                          <td className="py-3 px-2 text-center">
+                            <Badge variant="default">Tersedia</Badge>
+                          </td>
+                          <td className="py-3 px-2 text-right">
+                            <Button variant="ghost" size="sm">
+                              Detail
+                            </Button>
+                          </td>
+                        </tr>
+                        <tr className="border-b">
+                          <td className="py-3 px-2">SP-002</td>
+                          <td className="py-3 px-2">Semen Portland 50kg</td>
+                          <td className="py-3 px-2">
+                            <Badge variant="outline">Bahan Bangunan</Badge>
+                          </td>
+                          <td className="py-3 px-2 text-center">85 sak</td>
+                          <td className="py-3 px-2 text-center">
+                            <Badge variant="default">Tersedia</Badge>
+                          </td>
+                          <td className="py-3 px-2 text-right">
+                            <Button variant="ghost" size="sm">
+                              Detail
+                            </Button>
+                          </td>
+                        </tr>
+                        <tr className="border-b">
+                          <td className="py-3 px-2">BR-003</td>
+                          <td className="py-3 px-2">Bata Ringan 10x20x60</td>
+                          <td className="py-3 px-2">
+                            <Badge variant="outline">Bahan Bangunan</Badge>
+                          </td>
+                          <td className="py-3 px-2 text-center">350 buah</td>
+                          <td className="py-3 px-2 text-center">
+                            <Badge variant="default">Tersedia</Badge>
+                          </td>
+                          <td className="py-3 px-2 text-right">
+                            <Button variant="ghost" size="sm">
+                              Detail
+                            </Button>
+                          </td>
+                        </tr>
+                        <tr className="border-b">
+                          <td className="py-3 px-2">HP-004</td>
+                          <td className="py-3 px-2">Helm Proyek</td>
+                          <td className="py-3 px-2">
+                            <Badge variant="outline">
+                              Perlengkapan Keamanan
+                            </Badge>
+                          </td>
+                          <td className="py-3 px-2 text-center">50 buah</td>
+                          <td className="py-3 px-2 text-center">
+                            <Badge variant="secondary">Stok Menipis</Badge>
+                          </td>
+                          <td className="py-3 px-2 text-right">
+                            <Button variant="ghost" size="sm">
+                              Detail
+                            </Button>
+                          </td>
+                        </tr>
+                        <tr className="border-b">
+                          <td className="py-3 px-2">KJ-005</td>
+                          <td className="py-3 px-2">Kayu Jati Grade A</td>
+                          <td className="py-3 px-2">
+                            <Badge variant="outline">Bahan Bangunan</Badge>
+                          </td>
+                          <td className="py-3 px-2 text-center">0 batang</td>
+                          <td className="py-3 px-2 text-center">
+                            <Badge variant="destructive">Habis</Badge>
+                          </td>
+                          <td className="py-3 px-2 text-right">
+                            <Button variant="ghost" size="sm">
+                              Detail
+                            </Button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
+
             <TabsContent value="reports" className="space-y-4">
               <h1 className="text-2xl font-bold mb-4">Laporan Harian</h1>
 

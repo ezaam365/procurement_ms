@@ -464,6 +464,131 @@ const Home = () => {
           {activeTab === "surveys" && <SurveyWorkflow />}
           {activeTab === "purchase-orders" && <PurchaseOrderManagement />}
 
+          {activeTab === "inventory" && (
+            <div className="space-y-6">
+              <h1 className="text-2xl font-bold">Inventory Management</h1>
+              <p className="text-muted-foreground">
+                Manage and track all products in the inventory system.
+              </p>
+
+              <div className="flex justify-between items-center mb-4">
+                <div className="flex gap-2">
+                  <select className="p-2 border rounded-md">
+                    <option value="">All Categories</option>
+                    <option value="bahan_bangunan">Bahan Bangunan</option>
+                    <option value="alat_konstruksi">Alat Konstruksi</option>
+                    <option value="material_finishing">
+                      Material Finishing
+                    </option>
+                    <option value="perlengkapan_keamanan">
+                      Perlengkapan Keamanan
+                    </option>
+                    <option value="material_listrik">Material Listrik</option>
+                  </select>
+                  <select className="p-2 border rounded-md">
+                    <option value="">All Warehouses</option>
+                    <option value="cikarang">Gudang Cikarang</option>
+                    <option value="bekasi">Gudang Bekasi</option>
+                    <option value="karawang">Gudang Karawang</option>
+                  </select>
+                </div>
+                <div>
+                  <Button variant="outline" className="mr-2">
+                    Export
+                  </Button>
+                  <Button>Add Product</Button>
+                </div>
+              </div>
+
+              <Card>
+                <CardContent className="p-6">
+                  <div className="overflow-x-auto">
+                    <table className="w-full">
+                      <thead>
+                        <tr className="border-b">
+                          <th className="text-left py-3 px-4">Product Name</th>
+                          <th className="text-left py-3 px-4">Category</th>
+                          <th className="text-left py-3 px-4">Warehouse</th>
+                          <th className="text-center py-3 px-4">Stock</th>
+                          <th className="text-right py-3 px-4">Price</th>
+                          <th className="text-right py-3 px-4">Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-b">
+                          <td className="py-3 px-4">Besi Hollow 4x2</td>
+                          <td className="py-3 px-4">
+                            <Badge variant="outline">Bahan Bangunan</Badge>
+                          </td>
+                          <td className="py-3 px-4">Gudang Cikarang</td>
+                          <td className="py-3 px-4 text-center">120</td>
+                          <td className="py-3 px-4 text-right">
+                            Rp 75.000/batang
+                          </td>
+                          <td className="py-3 px-4 text-right">
+                            <Button variant="ghost" size="sm">
+                              View
+                            </Button>
+                          </td>
+                        </tr>
+                        <tr className="border-b">
+                          <td className="py-3 px-4">Semen Portland 50kg</td>
+                          <td className="py-3 px-4">
+                            <Badge variant="outline">Bahan Bangunan</Badge>
+                          </td>
+                          <td className="py-3 px-4">Gudang Bekasi</td>
+                          <td className="py-3 px-4 text-center">85</td>
+                          <td className="py-3 px-4 text-right">
+                            Rp 52.000/sak
+                          </td>
+                          <td className="py-3 px-4 text-right">
+                            <Button variant="ghost" size="sm">
+                              View
+                            </Button>
+                          </td>
+                        </tr>
+                        <tr className="border-b">
+                          <td className="py-3 px-4">Bata Ringan 10x20x60</td>
+                          <td className="py-3 px-4">
+                            <Badge variant="outline">Bahan Bangunan</Badge>
+                          </td>
+                          <td className="py-3 px-4">Gudang Karawang</td>
+                          <td className="py-3 px-4 text-center">350</td>
+                          <td className="py-3 px-4 text-right">
+                            Rp 8.500/buah
+                          </td>
+                          <td className="py-3 px-4 text-right">
+                            <Button variant="ghost" size="sm">
+                              View
+                            </Button>
+                          </td>
+                        </tr>
+                        <tr className="border-b">
+                          <td className="py-3 px-4">Helm Proyek</td>
+                          <td className="py-3 px-4">
+                            <Badge variant="outline">
+                              Perlengkapan Keamanan
+                            </Badge>
+                          </td>
+                          <td className="py-3 px-4">Gudang Cikarang</td>
+                          <td className="py-3 px-4 text-center">50</td>
+                          <td className="py-3 px-4 text-right">
+                            Rp 45.000/buah
+                          </td>
+                          <td className="py-3 px-4 text-right">
+                            <Button variant="ghost" size="sm">
+                              View
+                            </Button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          )}
+
           {activeTab === "reports" && (
             <div className="space-y-6">
               <h1 className="text-2xl font-bold">Executive Reporting</h1>
